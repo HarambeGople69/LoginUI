@@ -3,14 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myapp/constants.dart';
 
 class EmailForm extends StatelessWidget {
-  final TextEditingController controller;
-  const EmailForm({Key key, this.controller}) : super(key: key);
+  final TextEditingController? controller;
+  const EmailForm({Key? key, this.controller}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      validator: (String value) {
-        if (value.isNotEmpty || value.contains("@")) {
+      validator: (String? value) {
+        if (value!.isNotEmpty || value.contains("@")) {
           return null;
         } else {
           return "Invalid email";

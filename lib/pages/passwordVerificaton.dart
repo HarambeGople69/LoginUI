@@ -86,7 +86,7 @@ class VerificationPassState extends State<VerificationPass> {
                       child: Center(
                         child: TextFormField(
                           validator: (value) {
-                            if (value.isEmpty) {
+                            if (value!.isEmpty) {
                               return " ";
                             } else {
                               return null;
@@ -121,7 +121,7 @@ class VerificationPassState extends State<VerificationPass> {
                 OurElevatedButton(
                     title: "Next",
                     function: () {
-                      if (_formKey.currentState.validate()) {
+                      if (_formKey.currentState!.validate()) {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
                           return SetupPassword();
@@ -155,7 +155,7 @@ class VerificationPassState extends State<VerificationPass> {
       child: Center(
         child: TextFormField(
           validator: (value) {
-            if (value.isEmpty) {
+            if (value!.isEmpty) {
               return " ";
             } else {
               return null;

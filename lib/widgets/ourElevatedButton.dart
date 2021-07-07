@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OurElevatedButton extends StatelessWidget {
-  final String title;
-  final Function function;
-  const OurElevatedButton({Key key, this.title, this.function})
+  final String? title;
+  final Function? function;
+  const OurElevatedButton({Key? key,required this.title,required this.function})
       : super(key: key);
 
   @override
@@ -19,10 +19,10 @@ class OurElevatedButton extends StatelessWidget {
             ),
           ),
           onPressed: () {
-            function();
+            function!();
           },
           child: Text(
-            title,
+            title!,
             style: TextStyle(
               fontSize: ScreenUtil().setSp(60),
             ),

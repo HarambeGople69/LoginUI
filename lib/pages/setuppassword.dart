@@ -66,7 +66,6 @@ class _SetupPasswordState extends State<SetupPassword> {
                 ),
                 OurSizedBox(),
                 PasswordForm(
-                  
                   see: see1,
                   title: "Re-enter new Password",
                   controller: _repasswordController,
@@ -74,25 +73,24 @@ class _SetupPasswordState extends State<SetupPassword> {
                     changeSee1();
                   },
                 ),
-                OurSizedBox(),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return ForgotPassword();
-                    }));
-                  },
-                  child: Text(
-                    "Forgot password",
-                    style: paratext,
-                  ),
-                ),
+                // OurSizedBox(),
+                // InkWell(
+                //   onTap: () {
+                //     Navigator.push(context, MaterialPageRoute(builder: (context) {
+                //       return ForgotPassword();
+                //     }));
+                //   },
+                //   child: Text(
+                //     "Forgot password",
+                //     style: paratext,
+                //   ),
+                // ),
                 SizedBox(
                   height: ScreenUtil().setSp(250),
                 ),
                 OurElevatedButton(
                     title: "Next",
                     function: () {
-                      
                       // Navigator.push(
                       //     context, MaterialPageRoute(builder: (context) {
                       //       return

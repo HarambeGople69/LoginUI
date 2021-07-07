@@ -4,19 +4,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constants.dart';
 
 class PasswordForm extends StatelessWidget {
-  final bool see;
-  final Function changesee;
-  final String title;
-  final TextEditingController controller;
+  final bool? see;
+  final Function? changesee;
+  final String? title;
+  final TextEditingController? controller;
 
   const PasswordForm(
-      {Key key, this.see, this.changesee, this.controller, this.title})
+      {Key? key, this.see, this.changesee, this.controller, this.title})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     return TextFormField(
         validator: (value) {
-          if (value.trim().isEmpty) {
+          if (value!.trim().isEmpty) {
             return "Can't be empty";
           } else {
             return null;
@@ -24,13 +24,13 @@ class PasswordForm extends StatelessWidget {
         },
         style: TextStyle(fontSize: ScreenUtil().setSp(50)),
         controller: controller,
-        obscureText: see,
+        obscureText: see!,
         decoration: InputDecoration(
           suffixIcon: InkWell(
               onTap: () {
-                changesee();
+                changesee!();
               },
-              child: !see
+              child: !see!
                   ? Icon(
                       Icons.visibility_off,
                       color: Color(0xff7C37FA),

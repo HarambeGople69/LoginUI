@@ -47,7 +47,7 @@ class _SignInpageState extends State<SignInpage> {
                 OurElevatedButton(
                     title: "Next",
                     function: () {
-                      if (_formKey.currentState.validate()) {
+                      if (_formKey.currentState!.validate()) {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
                           return PasswordPage();
